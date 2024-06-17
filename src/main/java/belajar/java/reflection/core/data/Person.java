@@ -1,10 +1,15 @@
 package belajar.java.reflection.core.data;
 
+import belajar.java.reflection.core.annotation.NotBlank;
+
 import java.io.Serializable;
 
 public class Person implements Nameable, Serializable {
 
+    @NotBlank
     private String firstName;
+
+    @NotBlank(allowEmptyString = true)
     private String lastName;
 
     public Person() {
